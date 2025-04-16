@@ -13,10 +13,10 @@
 <body>
   <main class="profile-container">
     <h1 class="profile-title">User Profile</h1>
+    <div id="prompt" class="prompt" style="display: none;"></div> <!-- Ensure this line exists -->
 
 
-    <section class="tab-content " id="password">
-      <!-- Inline content from _passwordUpdate.html -->
+    <section class="tab-content active" id="password">
       <form class="password-form" novalidate>
         <h2>Password Update</h2>
         <div class="form-group">
@@ -35,36 +35,34 @@
     </section>
 
     <section class="tab-content" id="details">
-      <!-- Inline content from _userForm.html -->
       <form class="details-form" novalidate>
         <h2>Basic Details Update</h2>
         <div class="form-group">
           <label for="profile-image">Profile Image</label>
           <input type="file" id="profile-image" accept="image/*" aria-describedby="image-preview">
-          <img id="image-preview" src="#" alt="Profile Preview" class="preview-image" style="display:none;">
+          <img id="image-preview" src="#" alt="Profile Preview" class="preview-image">
         </div>
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+          <input type="text" id="name" name="name" placeholder="John Doe" required>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required>
         </div>
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+          <input type="tel" id="phone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}">
         </div>
         <div class="form-group">
           <label for="address">Address</label>
-          <textarea id="address" name="address" required></textarea>
+          <textarea id="address" name="address" required placeholder="123 main st"></textarea>
         </div>
         <button type="submit" class="btn">Update Details</button>
       </form>
     </section>
 
     <section class="tab-content" id="trips">
-      <!-- Inline content from _userHistory.html -->
       <section class="trips-section">
         <h2>Recent Trips</h2>
         <div class="trip-cards">
@@ -78,14 +76,13 @@
             <h3>Trip to New York</h3>
             <p>Date: 2025-04-01</p>
             <p>Amount: $750</p>
-            <a href="./dummy.pdf" class="btn " download>Download Bill</a>
+            <a href="./dummy.pdf" class="btn" download>Download Bill</a>
           </div>
         </div>
       </section>
     </section>
 
     <section class="tab-content" id="deactivate">
-      <!-- Inline content from _deactivateAccount.html -->
       <div class="deactivate-section">
         <button class="btn deactivate-btn">Deactivate Account</button>
         <dialog class="modal" id="deactivate-modal">
