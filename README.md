@@ -16,5 +16,4 @@ Gulp (for SCSS compilation, autoprefixing, minification, and live-reloading)
 
 Setup Instructions
 
-Clone the repository: git clone <your-repo-url>.
-Run the Gulp task: npm start or npx gulp.
+Clone the repository: git clone <https://github.com/harishjoshi143/userprofile>.

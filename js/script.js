@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
+      console.log(reader,"reader")
       reader.onload = (event) => {
         imagePreview.src = event.target.result;
         imagePreview.style.height = "300px";
@@ -100,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   confirmBtn.addEventListener("click", () => {
     deactivateMessage.style.color = "red";
     deactivateMessage.textContent =
-      "Account deactivation requested. Contact support to finalize.";
+      "Account deactivation updated";
     setTimeout(() => {
       modal.close();
       deactivateMessage.textContent = "";
