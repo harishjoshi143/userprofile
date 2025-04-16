@@ -1,0 +1,17 @@
+.modal {
+    border: none;
+    border-radius: 4px;
+    padding: 1rem;
+    width: 300px;
+    .modal-content {
+      text-align: center;
+    }
+    .instruction {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .message {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+  }

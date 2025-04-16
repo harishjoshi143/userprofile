@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="User Profile Management Page">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="dist/css/styles.css">
+</head>
+
+<body>
+  <main class="profile-container">
+    <h1 class="profile-title">User Profile</h1>
+
+
+    <section class="tab-content " id="password">
+      <!-- Inline content from _passwordUpdate.html -->
+      <form class="password-form" novalidate>
+        <h2>Password Update</h2>
+        <div class="form-group">
+          <label for="new-password">New Password</label>
+          <input type="password" id="new-password" name="new-password" aria-describedby="password-strength" required
+            minlength="6">
+          <span id="password-strength" class="strength-indicator">Weak</span>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required minlength="6">
+          <span id="match-error" class="error" aria-live="polite"></span>
+        </div>
+        <button type="submit" class="btn">Update Password</button>
+      </form>
+    </section>
+
+    <section class="tab-content" id="details">
+      <!-- Inline content from _userForm.html -->
+      <form class="details-form" novalidate>
+        <h2>Basic Details Update</h2>
+        <div class="form-group">
+          <label for="profile-image">Profile Image</label>
+          <input type="file" id="profile-image" accept="image/*" aria-describedby="image-preview">
+          <img id="image-preview" src="#" alt="Profile Preview" class="preview-image" style="display:none;">
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea id="address" name="address" required></textarea>
+        </div>
+        <button type="submit" class="btn">Update Details</button>
+      </form>
+    </section>
+
+    <section class="tab-content" id="trips">
+      <!-- Inline content from _userHistory.html -->
+      <section class="trips-section">
+        <h2>Recent Trips</h2>
+        <div class="trip-cards">
+          <div class="trip-card">
+            <h3>Trip to Paris</h3>
+            <p>Date: 2025-03-15</p>
+            <p>Amount: $500</p>
+            <a href="./dummy.pdf" class="btn" download>Download Bill</a>
+          </div>
+          <div class="trip-card">
+            <h3>Trip to New York</h3>
+            <p>Date: 2025-04-01</p>
+            <p>Amount: $750</p>
+            <a href="./dummy.pdf" class="btn " download>Download Bill</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="tab-content" id="deactivate">
+      <!-- Inline content from _deactivateAccount.html -->
+      <div class="deactivate-section">
+        <button class="btn deactivate-btn">Deactivate Account</button>
+        <dialog class="modal" id="deactivate-modal">
+          <div class="modal-content">
+            <h2>Confirm Deactivation</h2>
+            <p>Type "deactivate" to confirm:</p>
+            <input type="text" id="deactivate-input" aria-describedby="confirm-instruction">
+            <p id="confirm-instruction" class="instruction">Please type "deactivate" to proceed.</p>
+            <button class="btn confirm-btn" disabled>Confirm</button>
+            <button class="btn cancel-btn">Cancel</button>
+            <p id="deactivate-message" class="message" aria-live="polite"></p>
+          </div>
+        </dialog>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

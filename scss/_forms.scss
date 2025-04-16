@@ -1,0 +1,29 @@
+.form-group {
+    margin-bottom: 1rem;
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      &:focus {
+        outline: none;
+        border-color: $primary-color;
+      }
+    }
+    .strength-indicator {
+      font-size: 0.8rem;
+      color: #ff4444;
+    }
+    .error {
+      color: #ff4444;
+      font-size: 0.8rem;
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }

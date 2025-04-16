@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="deactivate-section">
+        <button class="btn deactivate-btn">Deactivate Account</button>
+        <dialog class="modal" id="deactivate-modal">
+            <div class="modal-content">
+                <h2>Confirm Deactivation</h2>
+                <p>Type "deactivate" to confirm:</p>
+                <input type="text" id="deactivate-input" aria-describedby="confirm-instruction">
+                <p id="confirm-instruction" class="instruction">Please type "deactivate" to proceed.</p>
+                <button class="btn confirm-btn" disabled>Confirm</button>
+                <button class="btn cancel-btn">Cancel</button>
+                <p id="deactivate-message" class="message" aria-live="polite"></p>
+            </div>
+        </dialog>
+    </div>
+</body>
+
+</html>
